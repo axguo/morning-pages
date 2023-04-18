@@ -9,16 +9,25 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Cutive+Mono&family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Cutive+Mono&family=Homemade+Apple&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="font-buttons">
-        <div class="font-button" onclick="changeFont('handwriting')">🪡</div>
-        <div class="font-button" onclick="changeFont('monospace')">🖇</div>
-        <div class="font-button" onclick="changeFont('serif')">💌</div>
+    <div class="buttons">
+        <div class="font-buttons">
+            <div class="emoji-button" onclick="changeFont('handwriting')">🪡</div>
+            <div class="emoji-button" onclick="changeFont('monospace')">🖇</div>
+            <div class="emoji-button" onclick="changeFont('serif')">💌</div>
+        </div>
+        <div class="text-buttons">
+            <div class="emoji-button hover-button" onmouseover="applyHover()" onmouseout="removeHover()" onclick="toggleReveal()">🔎</div>
+            <div class="emoji-button" onclick="copyText()">✂️</div>
+        </div>
     </div>
+    <div class="notif" id="notif">dreams copied</div>
     <div class="container">
         <div id="editor" class="serif" contenteditable="true"></div>
 

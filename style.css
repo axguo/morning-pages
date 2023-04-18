@@ -4,18 +4,24 @@
   padding-top: 10px;
 }
 
-.font-buttons {
-  opacity: .7;
+.font-buttons, .text-buttons {
+  opacity: .8;
+  padding: 10px;
 }
 
-.font-button {
+.emoji-button {
   display: inline-block;
-  padding: 10px 15px;
-  font-size: 1.3em;
+  padding: 5px 10px;
+  font-size: 1.2em;
 }
 
-.font-button:hover {
+.emoji-button:hover {
   cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .handwriting {
@@ -86,4 +92,20 @@
 
 .fade-1 {
   color: rgba(0, 0, 0, 0.1);
+}
+
+.notif {
+  height: 20px;
+  text-align: center;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.notif.show {
+  opacity: 1;
+}
+
+.hover-effect {
+  color: black;
 }

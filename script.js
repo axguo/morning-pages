@@ -1,3 +1,4 @@
+let reveal = false;
 let editor = document.getElementById('editor');
 
 let placeholderTexts = [
@@ -77,3 +78,45 @@ editor.addEventListener('input', () => {
 function changeFont(type) {
     editor.className = type;
 }
+
+function copyText() {
+    const text = document.getElementById('editor').innerText;
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    const notification = document.getElementById('notif');
+    notification.classList.add('show');
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 1500);
+}
+
+
+function applyHover() {
+    const elements = document.querySelectorAll('.white, .black, .fade-1, .fade-2, .fade-3, .fade-4, .fade-5');
+    elements.forEach((element) => {
+        element.classList.add('hover-effect');
+    });
+}
+
+function removeHover() {
+    if (!reveal) {
+        const elements = document.querySelectorAll('.white, .black, .fade-1, .fade-2, .fade-3, .fade-4, .fade-5');
+        elements.forEach((element) => {
+            element.classList.remove('hover-effect');
+        });
+    }
+}
+
+function toggleReveal() {
+    if (reveal) {
+        reveal = false;
+    } else {
+        reveal = true;
+    }
+} 
