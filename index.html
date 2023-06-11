@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-840RMTN8VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-840RMTN8VC');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morning Pages</title>
@@ -23,7 +32,8 @@
             <div class="emoji-button" onclick="changeFont('serif')">💌</div>
         </div>
         <div class="text-buttons">
-            <div class="emoji-button hover-button" onmouseover="applyHover()" onmouseout="removeHover()" onclick="toggleReveal()">🔎</div>
+            <div class="emoji-button hover-button" onmouseover="applyHover()" onmouseout="removeHover()"
+                onclick="toggleReveal()">🔎</div>
             <div class="emoji-button" onclick="copyText()">✂️</div>
         </div>
     </div>
